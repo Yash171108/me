@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reflex Speed Trainer - Test & Train Your Reflexes</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <h1 class="title">⚡ Reflex Speed Trainer</h1>
+            <p class="subtitle">Test and train your reaction time</p>
+        </header>
+
+        <!-- Main Content -->
+        <div class="content-wrapper">
+            <!-- Game Section -->
+            <section class="game-section">
+                <div class="game-area" id="gameArea">
+                    <div class="game-status" id="gameStatus">Ready to start?</div>
+                    <button class="start-button" id="startButton">Start Game</button>
+                    <button class="react-button" id="reactButton" style="display: none;">CLICK ME!</button>
+                </div>
+                <div class="timer-display">
+                    <span class="timer-label">Reaction Time:</span>
+                    <span class="timer-value" id="timerValue">0ms</span>
+                </div>
+            </section>
+
+            <!-- Stats Grid -->
+            <div class="stats-grid">
+                <!-- Best Record -->
+                <div class="stat-card best-record">
+                    <h3 class="stat-title">🏆 Best Record</h3>
+                    <p class="stat-value" id="bestRecord">--</p>
+                    <p class="stat-unit">milliseconds</p>
+                </div>
+
+                <!-- Average Time -->
+                <div class="stat-card average-time">
+                    <h3 class="stat-title">📊 Average Time</h3>
+                    <p class="stat-value" id="averageTime">--</p>
+                    <p class="stat-unit">milliseconds</p>
+                </div>
+
+                <!-- Total Attempts -->
+                <div class="stat-card total-attempts">
+                    <h3 class="stat-title">🎯 Total Attempts</h3>
+                    <p class="stat-value" id="totalAttempts">0</p>
+                    <p class="stat-unit">completed</p>
+                </div>
+
+                <!-- Consistency Score -->
+                <div class="stat-card consistency">
+                    <h3 class="stat-title">⭐ Consistency</h3>
+                    <p class="stat-value" id="consistencyScore">--</p>
+                    <p class="stat-unit">score</p>
+                </div>
+            </div>
+
+            <!-- Progress Section -->
+            <section class="progress-section">
+                <h2>Your Progress</h2>
+                
+                <!-- Speed Chart -->
+                <div class="chart-container">
+                    <h3>Recent Attempts Timeline</h3>
+                    <div class="attempts-timeline" id="attemptsTimeline">
+                        <p class="empty-message">No attempts yet. Start playing!</p>
+                    </div>
+                </div>
+
+                <!-- Progress Indicator -->
+                <div class="progress-info">
+                    <h3>Improvement Level</h3>
+                    <div class="progress-bar-container">
+                        <div class="progress-bar" id="progressBar">
+                            <div class="progress-fill" id="progressFill"></div>
+                        </div>
+                        <p class="progress-label" id="progressLabel">Beginner</p>
+                    </div>
+                </div>
+
+                <!-- Latest Attempts -->
+                <div class="attempts-list">
+                    <h3>Last 10 Attempts</h3>
+                    <div class="attempts-table" id="attemptsList">
+                        <p class="empty-message">No attempts yet.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Action Buttons -->
+            <div class="action-buttons">
+                <button class="btn btn-reset" id="resetButton">Reset All Stats</button>
+                <button class="btn btn-export" id="exportButton">Export Data</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
